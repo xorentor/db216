@@ -1,0 +1,9 @@
+rm -rf *.o
+nasm -g -f elf32 common.asm
+nasm -g -f elf32 core.asm 
+nasm -g -f elf32 db.asm
+nasm -g -f elf32 memory.asm
+nasm -g -f elf32 parse.asm
+nasm -g -f elf32 string.asm
+nasm -g -f elf32 debug.asm
+g++ *.o Common.h App.h App.cpp Main.cpp -o db
